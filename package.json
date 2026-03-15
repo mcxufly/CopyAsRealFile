@@ -2,7 +2,7 @@
   "name": "copy-as-real-file",
   "publisher": "Lilia",
   "displayName": "copy-as-real-file",
-  "description": "Copy VSCodium files to clipboard as CF_HDROP",
+  "description": "Copy VSCode/VSCodium files to clipboard as CF_HDROP or URL with MIME",
   "version": "0.0.5",
   "icon": "icon.PNG",
   "engines": {
