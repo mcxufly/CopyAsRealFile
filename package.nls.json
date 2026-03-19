@@ -1,0 +1,5 @@
+{
+    "extension.displayName": "Copy as Real File",
+    "extension.description": "Copy VSCode/VSCodium files to clipboard as CF_HDROP or URL with MIME",
+    "command.copyAsFile.title": "Copy as File"
+}

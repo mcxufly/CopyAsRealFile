@@ -1,0 +1,7 @@
+{
+    "Please select or open a local file on the left": "请在左侧选中或打开一个本地文件",
+    "Unsupported operating system: {0}": "暂不支持的操作系统: {0}",
+    "Copy failed: It seems you have not installed xclip or wl-clipboard": "复制失败：您似乎未安装 xclip 或 wl-clipboard",
+    "Copy failed: {0}": "复制失败: {0}",
+    "$(check) Copied [{0}] to clipboard": "$(check) 已复制 [{0}] 到剪贴板"
+  }

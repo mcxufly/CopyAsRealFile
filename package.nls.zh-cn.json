@@ -1,0 +1,5 @@
+{
+    "extension.displayName": "复制为真实文件",
+    "extension.description": "将 VS Code / VSCodium 中的文件作为真实文件 (CF_HDROP 或 URL) 复制到系统剪贴板",
+    "command.copyAsFile.title": "复制为真实文件"
+}

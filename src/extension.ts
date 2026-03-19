@@ -12,7 +12,7 @@ export function activate(context: vscode.ExtensionContext) {
         }
 
         if (!uri || uri.scheme !== 'file') {
-            vscode.window.showErrorMessage('请在左侧选中或打开一个本地文件');
+            vscode.window.showErrorMessage(vscode.l10n.t('Please select or open a local file on the left'));
             return;
         }
 
@@ -30,21 +30,21 @@ export function activate(context: vscode.ExtensionContext) {
             const macSafePath = filePath.replace(/"/g, '\\"').replace(/'/g, "'\\''");
             cmd = `osascript -e 'set the clipboard to POSIX file "${macSafePath}"'`;
         } else {
-            vscode.window.showErrorMessage(`暂不支持的操作系统: ${platform}`);
+            vscode.window.showErrorMessage(vscode.l10n.t('Unsupported operating system: {0}', platform));
             return;
         }
 
         exec(cmd, (error) => {
             if (error) {
-
                 if (platform === 'linux' && error.code === 255) {
-                    vscode.window.showErrorMessage('复制失败：您似乎未安装安装 xclip 或 wl-clipboard');
+                    vscode.window.showErrorMessage(vscode.l10n.t('Copy failed: It seems you have not installed xclip or wl-clipboard'));
                 } else {
-                    vscode.window.showErrorMessage(`复制失败: ${error.message}`);
+                    vscode.window.showErrorMessage(vscode.l10n.t('Copy failed: {0}', error.message));
                 }
                 return;
             }
-            vscode.window.setStatusBarMessage(`$(check) 已复制 [${filePath.split(/\\|\//).pop()}] 到剪贴板`, 3000);
+            const fileName = filePath.split(/\\|\//).pop() || '';
+            vscode.window.setStatusBarMessage(vscode.l10n.t('$(check) Copied [{0}] to clipboard', fileName), 3000);
         });
     });
 
