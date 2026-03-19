@@ -1,9 +1,10 @@
 {
   "name": "copy-as-real-file",
   "publisher": "Lilia",
-  "displayName": "copy-as-real-file",
-  "description": "Copy VSCode/VSCodium files to clipboard as CF_HDROP or URL with MIME",
-  "version": "0.0.5",
+  "displayName": "%extension.displayName%",
+  "description": "%extension.description%",
+  "l10n": "./l10n",
+  "version": "0.0.6",
   "icon": "icon.PNG",
   "engines": {
     "vscode": "^1.90.0"
@@ -17,7 +18,7 @@
     "commands": [
       {
         "command": "extension.copyAsFile",
-        "title": "复制为真实文件 (Copy as File)",
+        "title": "%command.copyAsFile.title%",
         "icon": "$(file-symlink-file)"
       }
     ],
